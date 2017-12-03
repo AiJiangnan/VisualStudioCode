@@ -2,9 +2,7 @@
 Order: 1
 Area: setup
 TOCTitle: Overview
-ContentId: FC5262F3-D91D-4665-A5D2-BCBCCF66E53A
 PageTitle: Setup VS Code
-DateApproved: 11/8/2017
 MetaDescription: Get Visual Studio Code up and running.
 MetaSocialImage: quicksetup_QuickSetup.png
 Translate: AiJiangnan
