@@ -64,20 +64,20 @@ VS Code的[扩展]()添加了额外的第三方支持：
 
 **问：使用VS Code有什么系统要求？**
 
-**答：**请参阅[系统要求](https://code.visualstudio.com/docs/supporting/requirements) 。
+**答：** 请参阅[系统要求](https://code.visualstudio.com/docs/supporting/requirements) 。
 
 **问：VS Code有多大？**
 
-**答：**VS Code的下载包 (< 100 MB) ，安装后硬盘占用小于200MB。
+**答：** VS Code的下载包 (< 100 MB) ，安装后硬盘占用小于200MB。
 
 **问：如何新建和运行一个项目？**
 
-**答：**VS Code没有传统的**文件** > **新建项目**这样的菜单，也没有预装的项目模板。你只需按照你的开发意愿来添加[组件]()和构建工具。像[Yeoman](http://yeoman.io/)这样的构建工具，像使用[NPM](https://www.npmjs.com/)包管理器来获取大量的模块。
+**答：** VS Code没有传统的**文件** > **新建项目**这样的菜单，也没有预装的项目模板。你只需按照你的开发意愿来添加[组件]()和构建工具。像[Yeoman](http://yeoman.io/)这样的构建工具，像使用[NPM](https://www.npmjs.com/)包管理器来获取大量的模块。
 
 **问：怎么查看VS Code的运行版本？**
 
-**答：**在Linux和Windows上，选择**帮助** > **关于**，在Mac上，选择**代码** > **关于Visual Studio Code**。
+**答：** 在Linux和Windows上，选择**帮助** > **关于**，在Mac上，选择**代码** > **关于Visual Studio Code**。
 
 **问：VS Code提示安装有误？**
 
-**答：**VS Code检测到一些安装文件被修改了，可能是被一个组件修改的。重装后VS Code会替换被修改的文件。登录[FAQ topic](https://code.visualstudio.com/docs/supporting/faq#_installation-appears-to-be-corrupt)查看更多详情。
+**答：** VS Code检测到一些安装文件被修改了，可能是被一个组件修改的。重装后VS Code会替换被修改的文件。登录[FAQ topic](https://code.visualstudio.com/docs/supporting/faq#_installation-appears-to-be-corrupt)查看更多详情。
