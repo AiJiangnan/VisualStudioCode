@@ -1,50 +1,54 @@
-# Visual Studio Code Documentation
+# Visual Studio Code
 
-You've found the Visual Studio Code documentation GitHub repository which contains the content for the [Visual Studio Code documentation](https://code.visualstudio.com/docs).
+你可以在Visual Studio Code帮助文档的Github仓库中找到所有[Visual Studio Code帮助文档](https://code.visualstudio.com/docs)的内容。
 
-Topics submitted here will be published to the [Visual Studio Code](https://code.visualstudio.com) portal.
+在这里提交的话题会发布在[Visual Studio Code](https://code.visualstudio.com)的门户网站上。
 
-If you are looking for the VS Code product GitHub repository, you can find it [here](https://github.com/Microsoft/vscode).
+如果你正在寻找VS Code软件的GitHub仓库，你可以从这找到 [https://github.com/Microsoft/vscode](https://github.com/Microsoft/vscode)。
 
 ## Visual Studio Code
 
-[VS Code](https://code.visualstudio.com/) is a lightweight but powerful development environment for building and debugging modern web and cloud applications.  It is free and available on your favorite platform - Linux, Mac and Windows.
+[VS Code](https://code.visualstudio.com/)是一款轻量而又强大的用于构建和调试现代web应用和云应用的开发环境。它是免费而又支持Linux、Mac和Windows多平台的。
 
-If you landed here looking for other information about VS Code, head over to [our website](https://code.visualstudio.com) for additional information.
+如果你想获取其他关于VS Code的信息，可以去[官网](https://code.visualstudio.com)获得额外的信息。
 
-## Contributing to the documentation
+## 贡献
 
-To contribute with new topics/information or make changes to existing documentation, see [contributing](https://github.com/Microsoft/vscode-docs/blob/master/CONTRIBUTING.md) for instructions and guidelines.
+创建了新的话题/信息，或者对原有的文档做了更新，可以参考[贡献](https://github.com/Microsoft/vscode-docs/blob/master/CONTRIBUTING.md)。
 
-## Feedback
+## 反馈
 
-If you want to give documentation feedback, please use the feedback control located at the bottom of each documentation page.
+如果你想给帮助文档做反馈，请在每篇文档下面的反馈栏中执行。
 
-## Documentation Issues
+## 话题
 
-To enter doc bugs, please create a [new GitHub issue](https://github.com/Microsoft/vscode-docs/issues) (try to check if there isn't a topic about your issue already).
+为了防止文档的漏洞，如果没有你想要的话题，请新建一个[GitHub issue](https://github.com/Microsoft/vscode-docs/issues)。
 
-If you think the issue is with the VS Code product itself, please enter issues [here](https://github.com/Microsoft/vscode/issues)
+如果你的话题是关于VS Code软件本身的，请进入[issues](https://github.com/Microsoft/vscode/issues)。
 
-## Editing
+## 编辑
 
-In order to edit the VS Code documentation, ensure that you have [Git](https://git-scm.com/downloads) installed.
+如果你想要编辑VS Code帮助文档，请确保你安装了[Git](https://git-scm.com/downloads)。
 
-Clone a copy of the repo:
+克隆仓库：
 
 ```
 git clone https://github.com/Microsoft/vscode-docs.git
 ```
 
-VS Code itself is great for reviewing and editing [Markdown](https://code.visualstudio.com/docs/languages/markdown) with nice preview support.
+VS Code本身对[Markdown](https://code.visualstudio.com/docs/languages/markdown)有着很好的支持，不管是预览还是编辑。
 
-If you want to use VS Code, simply navigate to the `vscode-docs` directory and launch VS Code from there:
+如果你想使用VS Code简单的浏览`vscode-docs`文件目录，你可以这样来启动VS Code：
 
 ```
 cd vscode-docs
 code .
 ```
 
-You can open any of the Markdown files and see a preview with the **Open Preview to the Side** button in the upper right of the editor.
+你可以打开任何Markdown文件，通过点击编辑器右上角的**打开侧边预览**来预览。
 
 ![Markdown Preview Button](images/MDPreviewButton.png)
+
+
+
+**翻译：** 艾江南
