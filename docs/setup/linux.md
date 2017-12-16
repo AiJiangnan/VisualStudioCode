@@ -15,16 +15,16 @@ Date: 12/3/2017
 
 ### 基于Debian和Ubuntu
 
-The easiest way to install for Debian/Ubuntu based distributions is to download and install the [.deb package (64-bit)](https://go.microsoft.com/fwlink/?LinkID=760868) either through the graphical software center if it's available or through the command line with:
+基于Debian/Ubuntu最简单的安装方式是下载 [.deb包 (64-bit)](https://go.microsoft.com/fwlink/?LinkID=760868) ，然后通过图形软件中心安装，如果不可用，也可以使用下面的指令安装：
 
 ```bash
 sudo dpkg -i <file>.deb
 sudo apt-get install -f # Install dependencies
 ```
 
-Installing the .deb package will automatically install the apt repository and signing key to enable auto-updating using the regular system mechanism. Note that 32-bit and .tar.gz binaries are also available on the [download page](/Download).
+在使用常规系统机制下，在安装.deb包的时候会自动安装apt仓库和签名密钥来自动更新。注意32位版本和.tar.gz二进制压缩版本都有。
 
-The repository and key can also be installed manually with the following script:
+通常使用下面的脚本来安装仓库和密钥：
 
 ```bash
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -32,7 +32,7 @@ sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 ```
 
-Then update the package cache and install the package using:
+使用下面的脚本来更新程序包和安装程序包：
 
 ```bash
 sudo apt-get update
@@ -41,21 +41,21 @@ sudo apt-get install code # or code-insiders
 
 ### 基于RHEL、Fedora和CentOS
 
-We currently ship the stable 64-bit VS Code in a yum repository, the following script will install the key and repository:
+我们一般只将64位版本的VS Code放在yum仓库上，下面的脚本用来安装密钥和仓库：
 
 ```bash
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 ```
 
-Then update the package cache and install the package using `dnf` (Fedora 22 and above):
+使用`dnf`指令来更新和安装包（Fedora 22或以上）：
 
 ```bash
 dnf check-update
 sudo dnf install code
 ```
 
-Or on older versions using `yum`:
+老版本使用`yum`指令：
 
 ```bash
 yum check-update
@@ -64,14 +64,14 @@ sudo yum install code
 
 ### 基于openSUSE和SLE
 
-The yum repository above also works for openSUSE and SLE based systems, the following script will install the key and repository:
+基于openSUSE和SLE的系统也有yum仓库，使用下面的脚本安装密钥和仓库：
 
 ```bash
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/zypp/repos.d/vscode.repo'
 ```
 
-Then update the package cache and install the package using:
+使用下面的脚本更新和安装程序包：
 
 ```bash
 sudo zypper refresh
@@ -80,11 +80,11 @@ sudo zypper install code
 
 ### 基于Arch Linux的AUR包
 
-There is a community maintained Arch User Repository (AUR) [package for VS Code](https://aur.archlinux.org/packages/visual-studio-code).
+社区维护的Arch User Repository (AUR)包 [VS Code](https://aur.archlinux.org/packages/visual-studio-code) 。
 
 ### 基于NixOS的Nix包（或任何基于Nix包的Linux）
 
-There is a community maintained [Nix package](https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/editors/vscode/default.nix) in the nixpkgs repository. In order to install it using Nix, set `allowUnfree` option to true in your `config.nix` and execute:
+在nixpkgs仓库中有社区维护的 [Nix package](https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/editors/vscode/default.nix) 。要使用Nix，在`config.nix`中设置`allowUnfree`选项为true，并设置为可执行：
 
 ```bash
 nix-env -i vscode
@@ -92,31 +92,31 @@ nix-env -i vscode
 
 ### 手动安装.rpm包
 
-The [.rpm package (64-bit)](https://go.microsoft.com/fwlink/?LinkID=760867) can also be manually downloaded and installed, however auto-updating won't work unless the repository above is installed. Once downloaded it can be installed using your package manager, for example with `dnf`:
+64位版本的[.rpm package (64-bit)](https://go.microsoft.com/fwlink/?LinkID=760867)也常被下载和安装，然而只有下载了仓库才会自动更新。一旦你使用包管理器下载，就可以安装了，例如使用`dnf`指令：
 
 ```bash
 sudo dnf install <file>.rpm
 ```
 
-Note that 32-bit and .tar.gz binaries are also available on the [download page](/Download).
+注意：32位版本的和.tar.gz二进制版本的也会提供下载。
 
 ## 更新
 
-VS Code ships monthly and you can see when a new release is available by checking [Updates](/updates). If the VS Code repository was installed correctly, then your system package manager should handle auto-updating in the same way as other packages on the system.
+VS Code每月更新一次，你可以通过检查更新来看一次新版本的特性。如果VS Code仓库已经安装好了，你就可以使用你系统的程序包管理器像其他软件包一样来自动更新VS Code。
 
 ## Node.js
 
-Node.js is a popular platform and runtime for easily building and running JavaScript applications. It also includes [NPM](https://www.npmjs.com/), a Package Manager for Node.js modules. You'll see Node.js and NPM mentioned frequently in our documentation and some optional VS Code tooling requires Node.js (for example, the VS Code [extension generator](/docs/extensions/yocode.md)).
+Node.js是一个流行的简单的构建和运行JavaScript应用的开发平台和运行环境。它包含[NPM](https://www.npmjs.com/)，一个Node.js模块的包管理器。我们的文档会多次提及Node.js和NPM，并且一些可选的VS Code工具也会要求Node.js。
 
-If you'd like to install Node.js on Linux, see [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager) to find the Node.js package and installation instructions tailored to your Linux distribution.
+如果你想要在Linux安装Node.js，看[安装Node.js via包管理器](https://nodejs.org/en/download/package-manager)来找到适用于你的Linux发行版的Node.js包。
 
-To learn more about JavaScript and Node.js, see our [Node.js tutorial](/docs/nodejs/nodejs-tutorial.md) where you'll learn about running and debugging Node.js applications with VS Code.
+了解更多关于JavaScript和Node.js，请看我们的[Node.js教程](/docs/nodejs/nodejs-tutorial.md)，在这里你将会学习如何使用VS Code来运行和调试Node.js应用。
 
 ## 设置默认编辑器
 
 ### xdg-open
 
-You can set the default text editor for text files (`text/plain`) that is used by `xdg-open` with the following command:
+使用下面的`xdg-open`指令可以设置纯文本文件（`text/plain`）的默认编辑器：
 
 ```bash
 xdg-mime default code.desktop text/plain
@@ -124,7 +124,7 @@ xdg-mime default code.desktop text/plain
 
 ### Debian alternatives system
 
-Debian-based distributions allow setting a default *editor* using the [alternatives system](https://wiki.debian.org/DebianAlternatives), without concern for the mime type. You can set this by running the following and selecting code.
+基于Debian发行版使用[alternatives system](https://wiki.debian.org/DebianAlternatives)来设置默认编辑器，不包括mime类型，使用下面的指令来设置：
 
 ```bash
 sudo update-alternatives --set editor /usr/bin/code
@@ -132,25 +132,25 @@ sudo update-alternatives --set editor /usr/bin/code
 
 ## 后续
 
-Once you have installed VS Code, these topics will help you learn more about VS Code:
+当你安装好了VS Code，这些话题会让你学到更多东西：
 
-* [Additional Components](/docs/setup/additional-components.md) - Learn how to install Git, Node.js, TypeScript and tools like Yeoman.
-* [User Interface](/docs/getstarted/userinterface.md) - A quick orientation to VS Code.
-* [User/Workspace Settings](/docs/getstarted/settings.md) - Learn how to configure VS Code to your preferences through settings.
+* [组件](/docs/setup/additional-components.md) - 学习怎么安装Git、Node.js、TypeScript和像Yeoman一样的工具。
+* [UI](/docs/getstarted/userinterface.md) - VS Code的核心方向。
+* [设置](/docs/getstarted/settings.md) - 学习如何对VS Code进行偏好设置。
 
 ## 常见问题
 
 ### Azure虚拟机问题
 
-I'm getting a "Running without the SUID sandbox" error?
+**问：**提示“Running without the SUID sandbox”错误？
 
-You can safely ignore this error.
+**答：**你可以大胆地忽略这个错误。
 
 ### Debian中删除文件到回收站
 
-If you see an error when deleting files from the VS Code Explorer on the Debian operating system, it might be because the trash implementation that VS Code is using is not there.
+如果你在Debian操作系统中的VS Code文件浏览器中删除文件报错，它可能是因为VS Code使用的回收站不存在。
 
-Run these commands to solve this issue:
+运行下面的指令来解决这个问题：
 
 ```bash
 sudo apt-get install gvfs-bin
@@ -158,25 +158,27 @@ sudo apt-get install gvfs-bin
 
 ### 超出系统限制错误
 
-When you see this error, it indicates that the VS Code file watcher is running out of handles. The current limit can be viewed by running:
+当你看到这个错误，它意味着VS Code文件监视器运行超出限制了。运行下面指令来查看当前限制：
 
 ```bash
 cat /proc/sys/fs/inotify/max_user_watches
 ```
 
-The limit can be increased to its maximum by editing `/etc/sysctl.conf` and adding this line to the end of the file:
+这个限制可以通过编辑`/etc/sysctl.conf`在文件末尾添加下面的一行可以增加它的最大值。
 
 ```bash
 fs.inotify.max_user_watches=524288
 ```
 
-The new value can then be loaded in by running `sudo sysctl -p`. Note that [Arch Linux](https://www.archlinux.org/) works a little differently, [view this page for advice](https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers).
+设置好的新的值使用指令`sudo sysctl -p`来重新加载。注意[Arch Linux](https://www.archlinux.org/)与此有点不同，[请查看更多帮助](https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers)。
 
-While 524288 is the maximum number of files that can be watched, if you're in an environment that is particularly memory constrained, you may wish to lower the number. Each file watch [takes up 540 bytes (32-bit) or ~1kB (64-bit)](https://stackoverflow.com/a/7091897/1156119), so assuming that all 524288 watches are consumed that results in an upper bound of around 256MB (32-bit) or 512MB (64-bit).
+当文件监视的最大值为524288时，如果你的运行环境内存不够，你应该设置一个更小的值。每个文件在[540 bytes (32-bit)或~1kB (64-bit)](https://stackoverflow.com/a/7091897/1156119)，所以会产生所有524288的监视会消耗256MB (32-bit)或512MB (64-bit)。
 
 ### Ubuntu中文字符不可见
 
 We're working on a fix. In the meantime, open the application menu, then choose **File** > **Preferences** > **Settings**. Then set `editor.fontFamily` as shown:
+
+
 
 ```json
     "editor.fontFamily": "Droid Sans Mono, Droid Sans Fallback"
