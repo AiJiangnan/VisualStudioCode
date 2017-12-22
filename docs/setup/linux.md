@@ -176,9 +176,7 @@ fs.inotify.max_user_watches=524288
 
 ### Ubuntu中文字符不可见
 
-We're working on a fix. In the meantime, open the application menu, then choose **File** > **Preferences** > **Settings**. Then set `editor.fontFamily` as shown:
-
-
+选择应用菜单**文件 **> **首选项** > **设置**，然后设置`editor.fontFamily`项如下：
 
 ```json
     "editor.fontFamily": "Droid Sans Mono, Droid Sans Fallback"
@@ -186,7 +184,7 @@ We're working on a fix. In the meantime, open the application menu, then choose 
 
 ### git安装失败
 
-This error can appear during installation and is typically caused by the package manager's being out of date. Try updating it and installing again:
+导致软件安装失败的一个典型的问题就是包管理器版本较老，使用下面指令更新后再安装：
 
 ```bash
 # For .deb
@@ -201,7 +199,7 @@ sudo dnf update
 
 ### Ubuntu中使用code指令不能置顶打开窗口
 
-Running 'code .' on Ubuntu when VS Code is already open in the current directory will not bring VS Code into the foreground. This is a feature of the OS which can be disabled using `ccsm`.
+在Ubuntu中，当VS Code在当前目录下已经运行的时候不能使VS Code置顶，这是由于系统不支持`ccsm`，运行下面指令安装：
 
 ```bash
 # Install
@@ -212,4 +210,3 @@ sudo apt-get install compizconfig-settings-manager
 ccsm
 ```
 
-Under **General** > **General Options** > **Focus & Raise Behaviour**, set "Focus Prevention Level" to "Off". Remember this is an OS-level setting that will apply to all applications, not just VS Code.
