@@ -6,60 +6,62 @@ ContentId: 4670C281-5761-46E6-8C46-10D523946FFB
 PageTitle: Running Visual Studio Code on Windows
 DateApproved: 11/8/2017
 MetaDescription: Get Visual Studio Code up and running on Windows
+Date: 2018.1.2
+translate: AiJiangnan
 ---
-# Running VS Code on Windows
+# Windows - VS Code
 
-## Installation
+## 安装
 
-1. Download the [Visual Studio Code installer](https://go.microsoft.com/fwlink/?LinkID=534107) for Windows.
-2. Once it is downloaded, run the installer (VSCodeSetup-version.exe). This will only take a minute.
-3. By default, VS Code is installed under `C:\Program Files\Microsoft VS Code` for a 64-bit machine.
+1. 下载Windows版本的 [VS Code](https://go.microsoft.com/fwlink/?LinkID=534107) 安装包。
+2. 下载完后运行`VSCodeSetup-version.exe`进行安装，只需一点点时间。
+3. 在64位计算机上VS Code默认安装路径为 `C:\Program Files\Microsoft VS Code` 。
 
-You can also find a Zip archive [here](/docs/?dv=winzip).
+你也可以下载VS Code的Zip压缩包。
 
->**Note:** .NET Framework 4.5.2 or higher is required for VS Code.  If you are using Windows 7, make sure you have at least [.NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42643) installed.
+>**注意：**VS Code要求.NET Framework 4.5.2或更高版本的环境。如果你的系统是Window 7，需要安装 [.NET Framework 4.5.2](https://www.microsoft.com/en-us/download/details.aspx?id=42643) 或以上版本的环境。
 
->**Tip:** Setup will optionally add Visual Studio Code to your `%PATH%`, so from the console you can type 'code .' to open VS Code on that folder. You will need to restart your console after the installation for the change to the `%PATH%` environmental variable to take effect.
+>**提示：**安装时可选设置将VS Code添加到环境变量 `%PATH%` 中，添加之后就可以在控制台中输入`code .`用VS Code打开当前文件夹。在安装后需要重启控制台来使你修改的环境变量 `%PATH%` 生效。
 
-## 32 bit versions
+## 32位版本
 
-If you need to run a 32 bit version of VS Code, both an 32 bit [Installer](https://go.microsoft.com/fwlink/?LinkId=723965) and [Zip archive](https://go.microsoft.com/fwlink/?LinkID=733265) are available.
+如果你需要下载32位版本的VS Code，[VS Code](https://go.microsoft.com/fwlink/?LinkId=723965) 安装包和 [VS Code](https://go.microsoft.com/fwlink/?LinkID=733265) Zip压缩包都有。
 
-## Updates
+## 更新
 
-VS Code ships monthly [releases](/updates) and supports auto-update when a new release is available. If you're prompted by VS Code, accept the newest update and it will be installed (you won't need to do anything else to get the latest bits). If you'd rather control VS Code updates manually, see [How do I opt out of auto-updates](/docs/supporting/faq.md#how-do-i-opt-out-of-vs-code-autoupdates).
+VS Code每月提供一次更新，并且可以自动更新。你只需通过VS Code的更新提示就可获得最新版本，而不需要做任何操作。如果你想设置手动更新，请看[如何禁用自动更新？](/docs/supporting/faq.md#how-do-i-opt-out-of-vs-code-autoupdates)。
 
-## Next Steps
+## 后续
 
 Once you have installed VS Code, these topics will help you learn more about VS Code:
 
-* [Additional Components](/docs/setup/additional-components.md) - Learn how to install Git, Node.js, TypeScript and tools like Yeoman.
-* [User Interface](/docs/getstarted/userinterface.md) - A quick orientation to VS Code.
-* [User/Workspace Settings](/docs/getstarted/settings.md) - Learn how to configure VS Code to your preferences through settings.
+* [组件](/docs/setup/additional-components.md) - 学习怎么安装Git、Node.js、TypeScript和像Yeoman一样的工具。
+* [UI](/docs/getstarted/userinterface.md) - VS Code的核心方向。
+* [设置](/docs/getstarted/settings.md) - 学习如何对VS Code进行偏好设置。
 
-## Common Questions
+## 常见问题
 
-### Trouble with the installer
+### 安装问题
 
-Try using the [zip file](/docs/?dv=winzip) instead of the installer.  To use this, unzip VS Code in your **Program Files** folder.
+使用压缩包而不是安装包，解压到 **Program Files** 文件夹下即可。
 
->**Note:** When VS Code is installed via a Zip file, you will need to manually update it for each [release](/updates).
+>**注意：**当通过压缩包渠道安装的VS Code，你需要手动要更新每个版本。
 
-### Icons are missing
+### 图标不显示
 
-I installed Visual Studio Code on my Windows 7 or 8 machine. Why are some icons not appearing in the workbench and editor?
+在Windows 7或8上安装VS Code，为什么在工作区和编辑区一些图标不显示？
 
-VS Code uses [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) icons and we have found instances where the .SVG file extension is associated with something other than `image/svg+xml`. We're considering options to fix it, but for now here's a workaround:
+VS Code使用的是 [SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) 格式的图标，而且我们已经知道`.SVG` 扩展名文件是否与 `image/svg+xml` 有关，我们可以进行一些设置来修复它，如下：
 
-Using the Command Prompt:
+使用命令提示符：
 
-1. Open an Administrator Command Prompt.
-2. Type `REG ADD HKCR\.svg /f /v "Content Type" /t REG_SZ /d image/svg+xml`.
+1. 打开管理员权限的命令提示符。
+2. 输入 `REG ADD HKCR\.svg /f /v "Content Type" /t REG_SZ /d image/svg+xml` 。
 
-Using the Registry Editor (regedit):
+使用注册表编辑器（regedit）：
 
-1. Start `regedit`.
-2. Open the `HKEY_CLASSES_ROOT` key.
-3. Find the `.svg` key.
-4. Set its `Content Type` Data value to `image/svg+xml`.
-5. Exit `regedit`.
+1. 打开 `regedit`.
+2. 选择 `HKEY_CLASSES_ROOT` 键.
+3. 找到 `.svg` 键.
+4. 设置 `Content Type` 的值为 `image/svg+xml`.
+5. 退出 `regedit`.
