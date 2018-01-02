@@ -6,30 +6,32 @@ ContentId: EEADB50A-F5E3-41E9-89DA-35F165196691
 PageTitle: Running Visual Studio Code on Mac
 DateApproved: 11/8/2017
 MetaDescription: Get Visual Studio Code up and running on Mac.
+Translate: AiJiangnan
+Date: 12/22/2017
 ---
 # Mac - VS Code
 
-## Installation
+## 安装
 
-1. [Download Visual Studio Code](https://go.microsoft.com/fwlink/?LinkID=534106) for Mac.
-2. Double-click on the downloaded archive to expand the contents.
-3. Drag `Visual Studio Code.app` to the `Applications` folder, making it available in the `Launchpad`.
-4. Add VS Code to your Dock by right-clicking on the icon and choosing `Options`, `Keep in Dock`.
+1. 下载Mac版 [Visual Studio Code](https://go.microsoft.com/fwlink/?LinkID=534106) 。
+2. 双击下载包解压内容。
+3. 将`Visual Studio Code.app`拖曳到`Applications`文件夹下，使它可以在`Launchpad`上启动。
+4. 右击图标选择`Options`, `Keep in Dock`来添加到程序坞。
 
-## Launching from the Command Line
+## 命令行运行
 
-You can also run VS Code from the terminal by typing 'code' after adding it to the path:
+将VS Code添加到环境变量中，可以在终端中运行指令`code`来启动：
 
-- Launch VS Code.
-- Open the **Command Palette** (`kb(workbench.action.showCommands)`) and type 'shell command' to find the **Shell Command: Install 'code' command in PATH** command.
+- 启动VS Code
+- 打开**命令行面板**(`Ctrl+Shift+P`)然后输入'shell command'，选择**Shell Command: Install 'code' command in PATH**
 
 ![Mac shell commands](images/mac/shell-command.png)
 
-- Restart the terminal for the new `$PATH` value to take effect. You'll be able to type 'code .' in any folder to start editing files in that folder.
+- 重启终端使新的`$PATH`变量生效，你只需输入`code`，就可以在任何文件夹下编辑文件
 
->**Note:** If you still have the old `code` alias in your `.bash_profile` (or equivalent) from an early VS Code version, remove it and replace it by executing the **Shell Command: Install 'code' command in PATH** command.
+>**注意：**如果已经存在老版本的`code`指令在你的`.bash_profile` 文件（或其它等价的文件）中，先删除它然后再执行上面的 **Shell Command: Install 'code' command in PATH**命令。
 
-To manually add VS Code to your path:
+手动添加VS Code到环境变量：
 
 ```bash
 cat << EOF >> ~/.bash_profile
@@ -38,21 +40,23 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 EOF
 ```
 
-## Touch Bar support
+## Touch Bar支持
 
-Out of the box VS Code adds actions to navigate in editor history as well as the full Debug tool bar to control the debugger on your Touch Bar:
+最新的VS Code将之前导航栏上的一些动作添加到了你的Touch Bar上，比如调试器。
 
 ![Mac Touch Bar](images/mac/touchbar.gif)
 
-## Updates
+## 更新
 
-VS Code ships monthly [releases](/updates) and supports auto-update when a new release is available. If you're prompted by VS Code, accept the newest update and it will get installed (you won't need to do anything else to get the latest bits).
+VS Code每月发布一次更新，并且支持自动更新。如果VS Code提示你更新了，而后你只需接受，就可以安装最新版本（不需要做任何多余的事）。
 
-## Preferences Menu
+## 首选项
 
 You can configure VS Code through [settings](/docs/getstarted/settings.md), [color themes](/docs/getstarted/themes.md) and [custom keybindings](/docs/getstarted/keybindings.md) and you will often see mention in our documentation of the **File** > **Preferences** menu group.  On a Mac, the **Preferences** menu group is under **Code**, not **File**.
 
-## Next Steps
+
+
+## 后续
 
 Once you have installed VS Code, these topics will help you learn more about VS Code:
 
@@ -60,7 +64,7 @@ Once you have installed VS Code, these topics will help you learn more about VS 
 * [User Interface](/docs/getstarted/userinterface.md) - A quick orientation around VS Code.
 * [User/Workspace Settings](/docs/getstarted/settings.md) - Learn how to configure VS Code to your preferences settings.
 
-## Common Questions
+## 常见问题
 
 **Q. Mono and El Capitan**
 
