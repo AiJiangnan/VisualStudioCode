@@ -52,25 +52,23 @@ VS Code每月发布一次更新，并且支持自动更新。如果VS Code提示
 
 ## 首选项
 
-You can configure VS Code through [settings](/docs/getstarted/settings.md), [color themes](/docs/getstarted/themes.md) and [custom keybindings](/docs/getstarted/keybindings.md) and you will often see mention in our documentation of the **File** > **Preferences** menu group.  On a Mac, the **Preferences** menu group is under **Code**, not **File**.
-
-
+你可以配置VS Code的设置、颜色主题和自定义快捷键，设置菜单组在**文件** > **首选项**中，在Mac上，**首选项**菜单组在**代码**菜单里，而不是**文件**菜单下。
 
 ## 后续
 
-Once you have installed VS Code, these topics will help you learn more about VS Code:
+当你安装好了VS Code，这些话题会让你学到更多东西：
 
-* [Additional Components](/docs/setup/additional-components.md) - Learn how to install Git, Node.js, TypeScript and tools like Yeoman.
-* [User Interface](/docs/getstarted/userinterface.md) - A quick orientation around VS Code.
-* [User/Workspace Settings](/docs/getstarted/settings.md) - Learn how to configure VS Code to your preferences settings.
+* [组件](/docs/setup/additional-components.md) - 学习怎么安装Git、Node.js、TypeScript和像Yeoman一样的工具。
+* [UI](/docs/getstarted/userinterface.md) - VS Code的核心方向。
+* [设置](/docs/getstarted/settings.md) - 学习如何对VS Code进行偏好设置。
 
 ## 常见问题
 
-**Q. Mono and El Capitan**
+**问：**Mono和EI Capitan
 
-**A:** Mono stopped working in Visual Studio Code after I installed OS X 10.11 El Capitan Public Beta. What do I do?
+**答：**在安装OS X10.11EI Capitan公共Beta版后VS Code不能运行Mono？
 
-Run these commands:
+运行下面指令：
 
 ```bash
 brew update
